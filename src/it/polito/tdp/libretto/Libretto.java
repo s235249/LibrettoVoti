@@ -38,5 +38,19 @@ public class Libretto {
 		return result;
 	}
 	
+	// ricerca voto relativo al corso specificato
+	
+	public Voto cercaEsame(String esame)
+	{
+		for (Voto v : this.voti)
+		{
+			if (v.getCorso().toUpperCase().equals((esame).toUpperCase()))
+			{
+				return v;
+			}
+		}
+		
+		return null;
+	}
 	
 }

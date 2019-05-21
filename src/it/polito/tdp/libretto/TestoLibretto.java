@@ -27,7 +27,11 @@ public class TestoLibretto {
 		List<Voto> ventinove= libr.cercaVoti(29);
 		System.out.println(ventinove);
 		
+		Voto e= libr.cercaEsame("Economia");
+		Voto s= libr.cercaEsame("Statistica");
 		
+		System.out.println(e);
+		System.out.println(s);
 		
 	
 	}
