@@ -80,7 +80,10 @@ public class Voto {
 	}
 	
 	
-	
+	public Voto clone()
+	{
+		return (new Voto(this.valutazione, this.corso, this.data));
+	}
 	
 	
 

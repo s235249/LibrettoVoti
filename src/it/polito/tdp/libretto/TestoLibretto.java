@@ -51,6 +51,22 @@ public class TestoLibretto {
 		
 		System.out.println(libr.toString());
 		
+		Libretto migliore= libr.librettoMigliorato();
+		
+		System.out.println(libr.toString());
+		System.out.println(migliore.toString());
+		
+		migliore.cancellaVotiScarsi();
+		System.out.println(migliore.toString()+"\n");
+		
+		libr.ordinaCorsi();
+		System.out.println(libr.toString());
+		
+		libr.ordinaValutazioni();
+		System.out.println(libr.toString());
+		
+		
+		
 	
 	}
 
