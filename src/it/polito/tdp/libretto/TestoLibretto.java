@@ -33,6 +33,17 @@ public class TestoLibretto {
 		System.out.println(e);
 		System.out.println(s);
 		
+		Voto giusto = new Voto(18, "Geometria", LocalDate.of(2017, 9, 1));
+		Voto sbagliato= new Voto(28, "Geometria", LocalDate.of(2017, 9, 1));
+		Voto mancante= new Voto( 19, "Analisi III", LocalDate.now());
+		
+		System.out.format("Il voto %s è %s\n", 
+							giusto.toString(), libr.esisteGiaVoto(giusto) );
+		System.out.format("Il voto %s è %s\n", 
+				sbagliato.toString(), libr.esisteGiaVoto(sbagliato) );
+		System.out.format("Il voto %s è %s\n", 
+				mancante.toString(), libr.esisteGiaVoto(mancante) );
+		
 	
 	}
 

@@ -42,15 +42,24 @@ public class Libretto {
 	
 	public Voto cercaEsame(String esame)
 	{
-		for (Voto v : this.voti)
-		{
-			if (v.getCorso().toUpperCase().equals((esame).toUpperCase()))
-			{
-				return v;
-			}
-		}
-		
-		return null;
+		Voto v= new Voto( 0, esame, null);
+		int  pos= this.voti.indexOf(v);
+		if (pos==-1)
+			return null;
+		else 
+			return voti.get(pos);
 	}
 	
+	// dato un voto determina se esiste già un voto con uguale corso e uguale punteggio
+	
+	public boolean esisteGiaVoto(Voto v)
+	{
+		int i= voti.indexOf(v);
+		if (i==-1)
+			return false;
+		
+		else
+			return (v.getValutazione() == this.voti.get(i).getValutazione());
+		
+	}
 }

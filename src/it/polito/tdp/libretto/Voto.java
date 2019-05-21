@@ -48,6 +48,33 @@ public class Voto {
 
 
 	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((corso == null) ? 0 : corso.hashCode());
+		return result;
+	}
+
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Voto other = (Voto) obj;
+		if (corso == null) {
+			if (other.corso != null)
+				return false;
+		} else if (!corso.equals(other.corso))
+			return false;
+		return true;
+	}
+
+
+	@Override
 	public String toString() {
 		return "Voto [voto=" + valutazione + ", corso=" + corso + ", data=" + data + "]";
 	}
