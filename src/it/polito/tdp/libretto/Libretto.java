@@ -16,8 +16,13 @@ public class Libretto {
 	// aggiunge voto a libretto con solo voto come parametro
 	// delega (uso stesso nome)
 
-	public void add(Voto v) {
-		voti.add(v);
+	public boolean add(Voto v) {
+		
+		if (!this.esisteGiaVoto(v) && !this.votoConflitto(v))
+			{voti.add(v);
+			return true;}
+		else 
+			{return false;}
 	}
 	
 	//seleziona sottoinsieme voti che hanno il punteggio specificato (v) -> ritorna lista voti con quel punteggio
@@ -61,5 +66,22 @@ public class Libretto {
 		else
 			return (v.getValutazione() == this.voti.get(i).getValutazione());
 		
+	}
+	
+	// se non esiste o ha stesso punteggio, no conflitto --- se esiste con punteggio diverso, conflitto
+	
+	public boolean votoConflitto(Voto v)
+	{
+
+		int i= voti.indexOf(v);
+		if (i==-1)
+			return false;
+		
+		else
+			return (v.getValutazione() != this.voti.get(i).getValutazione());
+	}
+	
+	public String toString() {
+		return this.voti.toString();
 	}
 }
