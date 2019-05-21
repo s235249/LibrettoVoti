@@ -4,26 +4,26 @@ import java.time.LocalDate;
 
 public class Voto {
 	
-	private int voto;
+	private int valutazione;
 	private String corso;
 	private LocalDate data;
 	
 	
-	public Voto(int voto, String corso, LocalDate data) {
+	public Voto(int valutazione, String corso, LocalDate data) {
 		super();
-		this.voto = voto;
+		this.valutazione = valutazione;
 		this.corso = corso;
 		this.data = data;
 	}
 
 
-	public int getVoto() {
-		return voto;
+	public int getValutazione() {
+		return valutazione;
 	}
 
 
-	public void setVoto(int voto) {
-		this.voto = voto;
+	public void setValutazione(int valutazione) {
+		this.valutazione = valutazione;
 	}
 
 
@@ -49,7 +49,7 @@ public class Voto {
 
 	@Override
 	public String toString() {
-		return "Voto [voto=" + voto + ", corso=" + corso + ", data=" + data + "]";
+		return "Voto [voto=" + valutazione + ", corso=" + corso + ", data=" + data + "]";
 	}
 	
 	
