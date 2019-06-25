@@ -21,3 +21,9 @@ public class Main extends Application {
 			e.printStackTrace();
 		}
 	}}
+
+
+// NB: CAMBIA PASSWORD NEL DB CONNECT
+// NEL CONTROLLER BISOGNA ISTANZIARE IL MODEL E I METODI GETTER E SETTER
+// E POI NEL MAIN PRIMA DI SCENE E DOPO BORDERSCONTROLLER 
+// Model model= new Model();
